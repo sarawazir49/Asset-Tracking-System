@@ -44,6 +44,7 @@ namespace AssetTracking
             Console.WriteLine("=================================================================");
             Console.ResetColor();
 
+
             // LEGEND - explain color coding
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Red;
