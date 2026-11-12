@@ -60,6 +60,11 @@ When adding an asset you enter:
     "OfficeRate": 10.5
   }
 ]
- 
+ ```
+## Technical Requirements
+
+- .NET 10
+- System.Text.Json
+  
 ## Author
 Student Project - Asset Tracking with OOP and JSON Persistence
