@@ -43,6 +43,18 @@ namespace AssetTracking
             Console.WriteLine($"  TOTAL: {assets.Count} | Computers: {assets.Count(a => a.Type == AssetType.Computer)} | Mobiles: {assets.Count(a => a.Type == AssetType.MobilePhone)} | Tablets: {assets.Count(a => a.Type == AssetType.Tablet)}");
             Console.WriteLine("=================================================================");
             Console.ResetColor();
+
+            // LEGEND - explain color coding
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("  ■ RED");
+            Console.ResetColor();
+            Console.WriteLine(" = Expired / Less than 90 days left (End of Life passed)");
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("  ■ YELLOW");
+            Console.ResetColor();
+            Console.WriteLine(" = Close to End of Life (Less than 180 days)");
         }
 
         // Print report for a specific asset type (Computer, Mobile, Tablet)
@@ -74,6 +86,7 @@ namespace AssetTracking
                 // Print asset row: ID, Brand, Model, Office, Dates, Price, Days left
                 Console.WriteLine($"{asset.Id,-8} {asset.Brand,-12} {asset.Model,-15} {officeName,-10} {asset.PurchaseDate:yyyy-MM-dd} {asset.Price} {asset.Office.Currency,-8} {asset.EndOfLifeDate:yyyy-MM-dd} {asset.DaysRemaining:F0}d");
                 Console.ResetColor();
+
             }
         }
     }
