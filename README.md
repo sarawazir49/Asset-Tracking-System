@@ -60,7 +60,9 @@ When adding an asset you enter:
     "OfficeRate": 10.5
   }
 ]
+
 ## Technical Requirements
+
 .NET 10 System.Text.Json (included in .NET)System.Linq for sorting/filteringNotes
 If assets.json exists, data is loaded on startupIf file doesn't exist, 3 sample assets are createdTo reset data, delete assets.json from bin/Debug/netX.X/ folderPrice is stored in local currency after USD conversionAuthor
 Student Project - Asset Tracking with OOP and JSON Persistence
